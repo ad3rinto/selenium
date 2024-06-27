@@ -22,9 +22,21 @@ shaped_names_list = []
 for _ in list_of_events_titles:
     shaped_names_list.append(_.text)
 
-full_list_dict = dict(zip(shaped_names_list, shaped_dates_list))
 
-print(full_list_dict)
+# print(shaped_names_list)
+# print(shaped_dates_list)
+series = 1
+main_list =[]
+dict1 = {}
+for (i, d) in zip(list_of_events_titles, list_of_events_dates):
+    text = i.text
+    date = d.text
+    dict1[text] = date
+    series += 1
+    main_list.append(dict1)
+
+
+print(main_list)
 # closes particular tab
 # driver.close()
 #
