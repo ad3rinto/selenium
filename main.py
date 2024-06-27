@@ -14,7 +14,17 @@ title = driver.title
 list_of_events_dates = driver.find_elements(By.CSS_SELECTOR, ".event-widget .shrubbery .menu li time")
 list_of_events_titles = driver.find_elements(By.CSS_SELECTOR, ".event-widget .shrubbery .menu li a")
 
-shaped_dates_list = []
+events = {}
+
+for n in range(len(list_of_events_dates)):
+    events[n] = {
+        "time": list_of_events_dates[n].text,
+        "event": list_of_events_titles[n].text
+    }
+
+print(events)
+'''    
+shaped_dates_list = []           
 for _ in list_of_events_dates:
     shaped_dates_list.append(_.text)
 
@@ -34,9 +44,9 @@ for (i, d) in zip(list_of_events_titles, list_of_events_dates):
     dict1[text] = date
     series += 1
     main_list.append(dict1)
+'''
 
 
-print(main_list)
 # closes particular tab
 # driver.close()
 #
