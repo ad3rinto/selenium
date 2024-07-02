@@ -10,3 +10,7 @@ driver.get(site)
 
 article_count = driver.find_element(By.CSS_SELECTOR, "#articlecount a").text
 print(article_count)
+
+article_images = driver.find_element(By.CSS_SELECTOR, "img")
+
+print(article_images)
