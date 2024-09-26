@@ -52,4 +52,4 @@ for (i, d) in zip(list_of_events_titles, list_of_events_dates):
 # driver.close()
 #
 # closes all tabs
-# driver.quit()
+driver.quit()
